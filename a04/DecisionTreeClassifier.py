@@ -108,7 +108,7 @@ def find(node, test):
     
     # If there was no possible result, return a default of target 0
     if (len(index[0]) < 1):
-        return 0
+        return find(node.children[0], test)
     
     # Move down the next branch
     return find(node.children[index[0][0]], test)
